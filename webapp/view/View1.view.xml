@@ -1,0 +1,53 @@
+<mvc:View xmlns:table="sap.ui.table" controllerName="ui5training2.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+      	<Label id="_IDGenLabel1" class="sapUiSmallMarginTop sapUiTinyMarginBottom" />
+	<FeedInput id="_IDGenFeedInput1"
+		post="onPost"
+		showIcon="true" />
+
+<Panel id="_IDGenPanel1" headerText="User Details">
+      <Table id="_IDGenTable1" items="{	path: '/results'}">
+            <items>
+                <ColumnListItem id="_IDGenColumnListItem1" type="Navigation" press="onLineItemPress">
+                    <cells>   
+                        <Text id="_IDGenText1" text="{username}"></Text>
+                        <Text id="_IDGenText2" text="{firstname}"></Text>
+                        <Text id="_IDGenText3" text="{lastname}"></Text>
+                        <Text id="_IDGenText4" text="{gender}"></Text>
+                        <Text id="_IDGenText5" text="{=${active} === 'X' ? 'Yes':'No'}"></Text>         <!-- Expression Binding -->
+                     </cells>
+                </ColumnListItem>
+           </items>
+         <columns>
+            <Column id="_IDGenColumn1" >
+                <header>
+                    <Text id="_IDGenText6" text="Username"></Text>
+                </header>
+            </Column>
+             <Column id="_IDGenColumn2" >
+                 <header>
+                    <Text id="_IDGenText7" text="First Name"></Text>
+                 </header>
+            </Column>
+             <Column id="_IDGenColumn3" >
+                <header>
+                     <Text id="_IDGenText8" text="Last Name"></Text>
+                  </header>
+            </Column>
+             <Column id="_IDGenColumn4" >
+                <header>
+                    <Text id="_IDGenText9" text="Gender"></Text>
+                </header>
+            </Column>
+            <Column id="_IDGenColumn5" >
+                <header>
+                    <Text id="_IDGenText10" text="Status"></Text>
+                </header>
+            </Column>
+      </columns>
+    </Table> 
+</Panel>
+    </Page>
+</mvc:View>
